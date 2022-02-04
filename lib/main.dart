@@ -4,6 +4,7 @@
 import 'package:flutter/material.dart';
 import '../screens/random_words/random_words.dart';
 import '../screens/columns/columns.dart';
+import './style.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +21,11 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
+          titleTextStyle: AppBarTextStyle,
+        ),
+        textTheme: const TextTheme(
+          headline1: TitleTextStyle,
+          bodyText1: Body1TextStyle,
         ),
       ),
       home: DefaultTabController(

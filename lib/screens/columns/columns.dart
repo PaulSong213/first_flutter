@@ -23,9 +23,12 @@ class _ColumnsState extends State<Columns> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           ImageBanner("assets/images/banner.jpeg"),
-          TextSection(Colors.green),
-          TextSection(Colors.blue),
-          TextSection(Colors.red),
+          TextSection("lorem Ipsum",
+              "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum "),
+          TextSection("lorem Ipsum",
+              "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum "),
+          TextSection("lorem Ipsum",
+              "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum "),
         ],
       ),
     );
