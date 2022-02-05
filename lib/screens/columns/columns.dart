@@ -1,36 +1,35 @@
 import 'package:flutter/material.dart';
 import 'local_widgets/image_banner.dart';
 import 'local_widgets/text_section.dart';
+import '../../models/location.dart';
 
-class Columns extends StatefulWidget {
-  const Columns({Key? key}) : super(key: key);
+class Columns extends StatelessWidget {
+  final int _locationId;
 
-  @override
-  _ColumnsState createState() => _ColumnsState();
-}
+  Columns(this._locationId);
 
-class _ColumnsState extends State<Columns> {
   @override
   Widget build(BuildContext context) {
+    final location = Location.fetchById(_locationId);
+
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: const Text('Columns Section'),
+        title: Text(location.name),
         elevation: 0,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          ImageBanner("assets/images/banner.jpeg"),
-          TextSection("lorem Ipsum",
-              "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum "),
-          TextSection("lorem Ipsum",
-              "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum "),
-          TextSection("lorem Ipsum",
-              "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum "),
-        ],
+          ImageBanner(location.imagePath),
+        ]..addAll(textSections(location)),
       ),
     );
+  }
+
+  List<Widget> textSections(Location location) {
+    return location.facts
+        .map((fact) => TextSection(fact.title, fact.text))
+        .toList();
   }
 }
