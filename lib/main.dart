@@ -1,13 +1,15 @@
 // Copyright 2018 The Flutter team. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
-import 'package:first_flutter/models/location.dart';
 import 'package:flutter/material.dart';
 import '../screens/random_words/random_words.dart';
 import '../screens/locations/locations.dart';
 import './style.dart';
 import '../screens/columns/columns.dart';
 import '../screens/shopping_list/shopping_list.dart';
+import 'screens/center_layout/center_layout.dart';
+import 'screens/row_layout/row_layout.dart';
+import 'screens/listview_layout/listview_layout.dart';
 
 const LocationsRoute = '/';
 const LocationDetailRoute = '/location_detail';
@@ -36,13 +38,16 @@ class MyApp extends StatelessWidget {
       ),
       onGenerateRoute: _routes(),
       home: DefaultTabController(
-        length: 3,
+        length: 6,
         child: Scaffold(
           body: TabBarView(
             children: [
               Locations(),
               ShoppingList(),
               RandomWords(),
+              CenterLayout(),
+              RowLayout(),
+              ListViewLayout(),
             ],
           ),
           bottomNavigationBar: const BottomAppBar(
@@ -53,6 +58,9 @@ class MyApp extends StatelessWidget {
                 Tab(icon: Icon(Icons.directions_car)),
                 Tab(icon: Icon(Icons.directions_transit)),
                 Tab(icon: Icon(Icons.directions_bike)),
+                Tab(icon: Icon(Icons.loyalty_outlined)),
+                Tab(icon: Icon(Icons.access_alarms_outlined)),
+                Tab(icon: Icon(Icons.donut_large_rounded)),
               ],
               labelColor: Colors.black54,
               indicator: UnderlineTabIndicator(
