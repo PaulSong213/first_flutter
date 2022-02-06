@@ -7,6 +7,7 @@ import '../screens/random_words/random_words.dart';
 import '../screens/locations/locations.dart';
 import './style.dart';
 import '../screens/columns/columns.dart';
+import '../screens/shopping_list/shopping_list.dart';
 
 const LocationsRoute = '/';
 const LocationDetailRoute = '/location_detail';
@@ -37,10 +38,10 @@ class MyApp extends StatelessWidget {
       home: DefaultTabController(
         length: 3,
         child: Scaffold(
-          body: const TabBarView(
+          body: TabBarView(
             children: [
               Locations(),
-              Icon(Icons.directions_transit),
+              ShoppingList(),
               RandomWords(),
             ],
           ),
