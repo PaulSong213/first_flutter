@@ -10,6 +10,7 @@ import '../screens/shopping_list/shopping_list.dart';
 import 'screens/center_layout/center_layout.dart';
 import 'screens/row_layout/row_layout.dart';
 import 'screens/listview_layout/listview_layout.dart';
+import 'screens/landing_page/landing_page.dart';
 
 const LocationsRoute = '/';
 const LocationDetailRoute = '/location_detail';
@@ -38,10 +39,11 @@ class MyApp extends StatelessWidget {
       ),
       onGenerateRoute: _routes(),
       home: DefaultTabController(
-        length: 6,
+        length: 7,
         child: Scaffold(
           body: TabBarView(
             children: [
+              LandingPage(),
               Locations(),
               ShoppingList(),
               RandomWords(),
@@ -55,6 +57,7 @@ class MyApp extends StatelessWidget {
             color: Colors.white,
             child: TabBar(
               tabs: [
+                Tab(icon: Icon(Icons.accessible_forward_sharp)),
                 Tab(icon: Icon(Icons.directions_car)),
                 Tab(icon: Icon(Icons.directions_transit)),
                 Tab(icon: Icon(Icons.directions_bike)),
