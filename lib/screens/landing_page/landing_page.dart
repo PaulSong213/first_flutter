@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'local_widgets/landing_app_bar.dart';
 import 'local_widgets/landing_banner.dart';
+import 'local_widgets/landing_menu.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({Key? key}) : super(key: key);
@@ -17,6 +18,7 @@ class LandingPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: const [
               LandingBanner(),
+              LandingMenu(),
             ],
           );
         },
