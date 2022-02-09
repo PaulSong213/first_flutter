@@ -26,7 +26,7 @@ class LandingBanner extends StatelessWidget {
             'Welcome back!',
             textAlign: TextAlign.start,
             style: TextStyle(
-              fontFamily: 'Robot',
+              fontFamily: 'Roboto',
               fontWeight: FontWeight.w700,
               fontSize: 30,
               color: Colors.white,
