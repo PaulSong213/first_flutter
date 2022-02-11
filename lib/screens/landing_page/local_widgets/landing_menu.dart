@@ -16,11 +16,7 @@ class LandingMenu extends StatelessWidget {
             children: [
               Text(
                 'Menu',
-                style: TextStyle(
-                  fontWeight: FontWeight.w700,
-                  fontSize: 18,
-                  color: Colors.black,
-                ),
+                style: Theme.of(context).textTheme.headline6,
               ),
               RichText(
                 text: TextSpan(

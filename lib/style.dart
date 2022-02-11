@@ -26,3 +26,9 @@ const Body1TextStyle = TextStyle(
   fontSize: BodyTextSize,
   color: Colors.black87,
 );
+
+const SectionTitle = TextStyle(
+  fontWeight: FontWeight.w700,
+  fontSize: 18,
+  color: Colors.black,
+);

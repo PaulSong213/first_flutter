@@ -35,6 +35,7 @@ class MyApp extends StatelessWidget {
         textTheme: const TextTheme(
           headline1: TitleTextStyle,
           bodyText1: Body1TextStyle,
+          headline6: SectionTitle,
         ),
       ),
       onGenerateRoute: _routes(),
