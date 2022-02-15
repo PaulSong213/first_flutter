@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import './local_widgets/welcome.dart';
+import './local_widgets/search.dart';
+import './local_widgets/categories.dart';
 
 class Travel extends StatelessWidget {
   const Travel({Key? key}) : super(key: key);
@@ -27,6 +29,8 @@ class Travel extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: const [
               Welcome(),
+              Search(),
+              Categories(),
             ],
           );
         },
