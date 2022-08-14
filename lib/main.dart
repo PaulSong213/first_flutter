@@ -13,8 +13,8 @@ import 'screens/listview_layout/listview_layout.dart';
 import 'screens/landing_page/landing_page.dart';
 import 'screens/travel/travel.dart';
 
-const LocationsRoute = '/';
-const LocationDetailRoute = '/location_detail';
+const locationsRoute = '/';
+const locationDetailRoute = '/location_detail';
 
 void main() {
   runApp(const MyApp());
@@ -84,13 +84,12 @@ class MyApp extends StatelessWidget {
   RouteFactory _routes() {
     return (settings) {
       // final Map<String, dynamic> arguments = settings.arguments;
-      final arguments = settings.arguments;
       Widget screen;
       switch (settings.name) {
-        case LocationsRoute:
+        case locationsRoute:
           screen = Locations();
           break;
-        case LocationDetailRoute:
+        case locationDetailRoute:
           screen = Columns(1);
           break;
         default:

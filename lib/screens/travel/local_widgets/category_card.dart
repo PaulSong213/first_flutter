@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CategoryCard extends StatelessWidget {
-  const CategoryCard({Key? key}) : super(key: key);
+  final String _title;
+  final Color _backgroundColor;
+  final IconData _iconName;
+  const CategoryCard(this._title, this._backgroundColor, this._iconName,
+      {Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,10 +18,10 @@ class CategoryCard extends StatelessWidget {
               padding: EdgeInsets.all(15),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                color: Colors.purple,
+                color: _backgroundColor,
               ),
               child: Icon(
-                Icons.airplanemode_active,
+                _iconName,
                 color: Colors.white,
                 size: 35.0,
               ),
@@ -25,7 +30,7 @@ class CategoryCard extends StatelessWidget {
               height: 5,
             ),
             Text(
-              'Flight',
+              _title,
               style: TextStyle(
                 color: Colors.black87,
               ),

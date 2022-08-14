@@ -12,10 +12,11 @@ class Categories extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            CategoryCard(),
-            CategoryCard(),
-            CategoryCard(),
-            CategoryCard(),
+            CategoryCard("Flight", Colors.blue.shade400, Icons.flight_sharp),
+            CategoryCard(
+                "Schedule", Colors.green.shade400, Icons.calendar_today),
+            CategoryCard("Promo", Colors.indigoAccent.shade200, Icons.padding),
+            CategoryCard("Perks", Colors.brown, Icons.all_out_sharp),
           ],
         ));
   }

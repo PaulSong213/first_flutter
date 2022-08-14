@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './local_widgets/welcome.dart';
 import './local_widgets/search.dart';
 import './local_widgets/categories.dart';
+import './local_widgets/prices.dart';
 
 class Travel extends StatelessWidget {
   const Travel({Key? key}) : super(key: key);
@@ -31,6 +32,7 @@ class Travel extends StatelessWidget {
               Welcome(),
               Search(),
               Categories(),
+              Prices(),
             ],
           );
         },
