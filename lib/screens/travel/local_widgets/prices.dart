@@ -11,8 +11,11 @@ class Prices extends StatelessWidget {
         margin: EdgeInsets.all(5),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            PricesCard(),
+          children: const [
+            PricesCard("Shopping", Color(0xff492998), Color(0xffEBE2FE),
+                Icons.wallet_giftcard_sharp, Color(0xff483379)),
+            PricesCard("Shopping", Color(0xff492998), Color(0xffEBE2FE),
+                Icons.wallet_giftcard_sharp, Color(0xff483379)),
           ],
         ));
   }

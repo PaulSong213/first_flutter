@@ -31,12 +31,12 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
-          titleTextStyle: AppBarTextStyle,
+          titleTextStyle: appBarTextStyle,
         ),
         textTheme: const TextTheme(
-          headline1: TitleTextStyle,
-          bodyText1: Body1TextStyle,
-          headline6: SectionTitle,
+          headline1: titleTextStyle,
+          bodyText1: body1TextStyle,
+          headline6: sectionTitle,
         ),
       ),
       onGenerateRoute: _routes(),

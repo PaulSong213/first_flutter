@@ -6,7 +6,7 @@ import '../../models/location.dart';
 class Columns extends StatelessWidget {
   final int _locationId;
 
-  Columns(this._locationId);
+  const Columns(this._locationId);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,8 @@ class Columns extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           ImageBanner(location.imagePath),
-        ]..addAll(textSections(location)),
+          ...textSections(location),
+        ],
       ),
     );
   }

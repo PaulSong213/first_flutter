@@ -1,35 +1,58 @@
 import 'package:flutter/material.dart';
 
 class PricesCard extends StatelessWidget {
+  final String _title;
+  final Color _titleColor;
+  final Color _backgroundColor;
+  final IconData _iconName;
+  final Color _iconColor;
+
+  const PricesCard(this._title, this._titleColor, this._backgroundColor,
+      this._iconName, this._iconColor,
+      {Key? key})
+      : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: 160,
-        height: 50,
-        color: Colors.grey.shade400,
-        padding: EdgeInsets.all(8),
+        width: 200,
+        decoration: BoxDecoration(
+          color: _backgroundColor,
+          borderRadius: const BorderRadius.all(
+            Radius.circular(10),
+          ),
+        ),
+        padding: EdgeInsets.all(12),
         child: Row(
           children: [
             Icon(
-              Icons.accessibility_new_rounded,
-              color: Colors.white,
-              size: 35.0,
+              _iconName,
+              color: _iconColor,
+              size: 38.0,
             ),
             SizedBox(
-              width: 8,
+              width: 14,
             ),
             Column(
-              children: const [
+              children: [
                 Text(
-                  "Test",
+                  _title,
                   style: TextStyle(
-                    color: Colors.black87,
+                    color: _titleColor,
+                    fontSize: 11,
+                    fontWeight: FontWeight.w400,
                   ),
+                  textAlign: TextAlign.left,
+                ),
+                SizedBox(
+                  height: 2,
                 ),
                 Text(
-                  "Test",
+                  "\$300.00",
                   style: TextStyle(
-                    color: Colors.black87,
+                    color: Color(0xff312E39),
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600, // light
                   ),
                 ),
               ],
